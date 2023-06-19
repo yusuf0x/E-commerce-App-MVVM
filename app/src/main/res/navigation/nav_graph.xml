@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashFragment">
+
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.yusuf.e_commerceapp.ui.splash.SplashFragment"
+        tools:layout="@layout/fragment_splash"
+        android:label="SplashFragment" >
+        <action
+            android:id="@+id/action_splashFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_splashFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.yusuf.e_commerceapp.ui.login.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment"
+            app:enterAnim="@anim/enter_anim_right"
+            app:exitAnim="@anim/exit_anim_right"
+            app:popEnterAnim="@anim/pop_enter_anim_right"
+            app:popExitAnim="@anim/pop_exit_anim_right"
+            app:popUpToInclusive="false"
+            />
+        <action
+            android:id="@+id/action_loginFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:enterAnim="@anim/enter_anim_right"
+            app:exitAnim="@anim/exit_anim_right"
+            app:popEnterAnim="@anim/pop_enter_anim_right"
+            app:popExitAnim="@anim/pop_exit_anim_right"
+            app:popUpToInclusive="false"/>
+        <action
+            android:id="@+id/action_loginFragment_to_forgotPasswordFragment"
+            app:destination="@id/forgotPasswordFragment"
+            app:enterAnim="@anim/enter_anim_right"
+            app:exitAnim="@anim/exit_anim_right"
+            app:popEnterAnim="@anim/pop_enter_anim_right"
+            app:popExitAnim="@anim/pop_exit_anim_right"
+            app:popUpToInclusive="false"/>
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.yusuf.e_commerceapp.ui.register.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" >
+        <action
+            android:id="@+id/action_registerFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:enterAnim="@anim/enter_anim_right"
+            app:exitAnim="@anim/exit_anim_right"
+            app:popEnterAnim="@anim/pop_enter_anim_right"
+            app:popExitAnim="@anim/pop_exit_anim_right"
+            app:popUpToInclusive="false"/>
+        <action
+            android:id="@+id/action_registerFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:enterAnim="@anim/enter_anim_right"
+            app:exitAnim="@anim/exit_anim_right"
+            app:popEnterAnim="@anim/pop_enter_anim_right"
+            app:popExitAnim="@anim/pop_exit_anim_right"
+            app:popUpToInclusive="false"/>
+        <action
+            android:id="@+id/action_registerFragment_to_verifyEmailFragment"
+            app:destination="@id/verifyEmailFragment"
+            app:enterAnim="@anim/enter_anim_right"
+            app:exitAnim="@anim/exit_anim_right"
+            app:popEnterAnim="@anim/pop_enter_anim_right"
+            app:popExitAnim="@anim/pop_exit_anim_right"
+            app:popUpToInclusive="false"
+            />
+    </fragment>
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.yusuf.e_commerceapp.ui.profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_splashFragment"
+            app:destination="@id/splashFragment"
+            app:enterAnim="@anim/enter_anim_right"
+            app:exitAnim="@anim/exit_anim_right"
+            app:popEnterAnim="@anim/pop_enter_anim_right"
+            app:popExitAnim="@anim/pop_exit_anim_right"/>
+        <action
+            android:id="@+id/action_profileFragment_to_wishListFragment"
+            app:destination="@id/wishListFragment"
+            app:enterAnim="@anim/enter_anim_right"
+            app:exitAnim="@anim/exit_anim_right"
+            app:popEnterAnim="@anim/pop_enter_anim_right"
+            app:popExitAnim="@anim/pop_exit_anim_right"/>
+        <action
+            android:id="@+id/action_profileFragment_to_profileEditFragment"
+            app:destination="@id/profileEditFragment"
+            app:enterAnim="@anim/enter_anim_right"
+            app:exitAnim="@anim/exit_anim_right"
+            app:popEnterAnim="@anim/pop_enter_anim_right"
+            app:popExitAnim="@anim/pop_exit_anim_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/wishListFragment"
+        android:name="com.yusuf.e_commerceapp.ui.wishlist.WishListFragment"
+        android:label="fragment_wish_list"
+        tools:layout="@layout/fragment_wish_list" >
+        <action
+            android:id="@+id/action_wishListFragment_to_productDetailFragment"
+            app:destination="@id/productDetailFragment"
+            app:enterAnim="@anim/enter_anim_right"
+            app:exitAnim="@anim/exit_anim_right"
+            app:popEnterAnim="@anim/pop_enter_anim_right"
+            app:popExitAnim="@anim/pop_exit_anim_right"
+            app:popUpToInclusive="false"/>
+    </fragment>
+    <fragment
+        android:id="@+id/cartFragment"
+        android:name="com.yusuf.e_commerceapp.ui.cart.CartFragment"
+        android:label="fragment_cart"
+        tools:layout="@layout/fragment_cart" />
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.yusuf.e_commerceapp.ui.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_productDetailFragment"
+            app:destination="@id/productDetailFragment"
+            app:enterAnim="@anim/enter_anim_right"
+            app:exitAnim="@anim/exit_anim_right"
+            app:popEnterAnim="@anim/pop_enter_anim_right"
+            app:popExitAnim="@anim/pop_exit_anim_right"
+            app:popUpToInclusive="false"
+            />
+        <action
+            android:id="@+id/action_homeFragment_to_cartFragment"
+            app:destination="@id/cartFragment"
+            app:enterAnim="@anim/enter_anim_right"
+            app:exitAnim="@anim/exit_anim_right"
+            app:popEnterAnim="@anim/pop_enter_anim_right"
+            app:popExitAnim="@anim/pop_exit_anim_right"
+            app:popUpToInclusive="false"/>
+        <action
+            android:id="@+id/action_homeFragment_to_profileFragment"
+            app:destination="@id/profileFragment"
+            app:enterAnim="@anim/enter_anim_right"
+            app:exitAnim="@anim/exit_anim_right"
+            app:popEnterAnim="@anim/pop_enter_anim_right"
+            app:popExitAnim="@anim/pop_exit_anim_right"
+            app:popUpToInclusive="false"/>
+        <action
+            android:id="@+id/action_homeFragment_to_searchFragment"
+            app:destination="@id/searchFragment"
+            app:enterAnim="@anim/enter_anim_right"
+            app:exitAnim="@anim/exit_anim_right"
+            app:popEnterAnim="@anim/pop_enter_anim_right"
+            app:popExitAnim="@anim/pop_exit_anim_right"
+            app:popUpToInclusive="false"/>
+        <action
+            android:id="@+id/action_homeFragment_to_categoryFragment"
+            app:destination="@id/categoryFragment"
+            app:enterAnim="@anim/enter_anim_right"
+            app:exitAnim="@anim/exit_anim_right"
+            app:popEnterAnim="@anim/pop_enter_anim_right"
+            app:popExitAnim="@anim/pop_exit_anim_right"
+            app:popUpToInclusive="false"/>
+        <action
+            android:id="@+id/action_homeFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:enterAnim="@anim/enter_anim_right"
+            app:exitAnim="@anim/exit_anim_right"
+            app:popEnterAnim="@anim/pop_enter_anim_right"
+            app:popExitAnim="@anim/pop_exit_anim_right"
+            app:popUpToInclusive="false"/>
+        <action
+            android:id="@+id/action_homeFragment_to_allProductsFragment"
+            app:destination="@id/allProductsFragment"
+            app:enterAnim="@anim/enter_anim_right"
+            app:exitAnim="@anim/exit_anim_right"
+            app:popEnterAnim="@anim/pop_enter_anim_right"
+            app:popExitAnim="@anim/pop_exit_anim_right"
+            app:popUpToInclusive="false"/>
+    </fragment>
+    <fragment
+        android:id="@+id/productDetailFragment"
+        android:name="com.yusuf.e_commerceapp.ui.product.ProductDetailFragment"
+        android:label="fragment_product_detail"
+        tools:layout="@layout/fragment_product_detail" >
+        <action
+            android:id="@+id/action_productDetailFragment_to_cartFragment"
+            app:destination="@id/cartFragment"
+            app:enterAnim="@anim/enter_anim_right"
+            app:exitAnim="@anim/exit_anim_right"
+            app:popEnterAnim="@anim/pop_enter_anim_right"
+            app:popExitAnim="@anim/pop_exit_anim_right"
+            app:popUpToInclusive="false"/>
+        <action
+            android:id="@+id/action_productDetailFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:enterAnim="@anim/enter_anim_right"
+            app:exitAnim="@anim/exit_anim_right"
+            app:popEnterAnim="@anim/pop_enter_anim_right"
+            app:popExitAnim="@anim/pop_exit_anim_right"
+            app:popUpToInclusive="false"/>
+        <argument
+            android:name="product"
+            app:argType="com.yusuf.e_commerceapp.model.network.response.Product"/>
+    </fragment>
+    <fragment
+        android:id="@+id/profileEditFragment"
+        android:name="com.yusuf.e_commerceapp.ui.profile.ProfileEditFragment"
+        android:label="fragment_profile_edit"
+        tools:layout="@layout/fragment_profile_edit" />
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.yusuf.e_commerceapp.ui.search.SearchFragment"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search" >
+        <argument
+            android:name="allProducts"
+            app:argType="com.yusuf.e_commerceapp.model.network.response.Product[]" />
+        <argument
+            android:name="query"
+            app:argType="string"/>
+        <action
+            android:id="@+id/action_searchFragment_to_cartFragment"
+            app:destination="@id/cartFragment"
+            app:enterAnim="@anim/enter_anim_right"
+            app:exitAnim="@anim/exit_anim_right"
+            app:popEnterAnim="@anim/pop_enter_anim_right"
+            app:popExitAnim="@anim/pop_exit_anim_right"
+            app:popUpToInclusive="false"/>
+        <action
+            android:id="@+id/action_searchFragment_to_productDetailFragment"
+            app:destination="@id/productDetailFragment"
+            app:enterAnim="@anim/enter_anim_right"
+            app:exitAnim="@anim/exit_anim_right"
+            app:popEnterAnim="@anim/pop_enter_anim_right"
+            app:popExitAnim="@anim/pop_exit_anim_right"
+            app:popUpToInclusive="false"/>
+    </fragment>
+    <fragment
+        android:id="@+id/categoryFragment"
+        android:name="com.yusuf.e_commerceapp.ui.category.CategoryFragment"
+        android:label="fragment_category"
+        tools:layout="@layout/fragment_category" >
+        <argument
+            android:name="allCategories"
+            app:argType="com.yusuf.e_commerceapp.model.network.response.Categorie[]" />
+    </fragment>
+    <fragment
+        android:id="@+id/forgotPasswordFragment"
+        android:name="com.yusuf.e_commerceapp.ui.login.ForgotPasswordFragment"
+        android:label="ForgotPasswordFragment" >
+        <action
+            android:id="@+id/action_forgotPasswordFragment_to_passwordResetVerificationFragment"
+            app:destination="@id/passwordResetVerificationFragment"
+            app:enterAnim="@anim/enter_anim_right"
+            app:exitAnim="@anim/exit_anim_right"
+            app:popEnterAnim="@anim/pop_enter_anim_right"
+            app:popExitAnim="@anim/pop_exit_anim_right"
+            app:popUpToInclusive="false"/>
+    </fragment>
+    <fragment
+        android:id="@+id/passwordResetVerificationFragment"
+        android:name="com.yusuf.e_commerceapp.ui.login.PasswordResetVerificationFragment"
+        android:label="PasswordResetVerificationFragment" />
+    <fragment
+        android:id="@+id/verifyEmailFragment"
+        android:name="com.yusuf.e_commerceapp.ui.register.VerifyEmailFragment"
+        android:label="VerifyEmailFragment" >
+        <argument
+            android:name="email"
+            app:argType="string" />
+        <argument
+            android:name="password"
+            app:argType="string" />
+        <argument
+            android:name="nom"
+            app:argType="string" />
+        <argument
+            android:name="prenom"
+            app:argType="string" />
+        <argument
+            android:name="code"
+            android:defaultValue="-1"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_verifyEmailFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:enterAnim="@anim/enter_anim_right"
+            app:exitAnim="@anim/exit_anim_right"
+            app:popEnterAnim="@anim/pop_enter_anim_right"
+            app:popExitAnim="@anim/pop_exit_anim_right"
+            app:popUpToInclusive="false"/>
+    </fragment>
+    <fragment
+        android:id="@+id/allProductsFragment"
+        android:name="com.yusuf.e_commerceapp.ui.product.AllProductsFragment"
+        android:label="fragment_all_products"
+        tools:layout="@layout/fragment_all_products" >
+        <argument
+            android:name="allProducts"
+            app:argType="com.yusuf.e_commerceapp.model.network.response.Product[]" />
+        <action
+            android:id="@+id/action_allProductsFragment_to_productDetailFragment"
+            app:destination="@id/productDetailFragment"
+            app:enterAnim="@anim/enter_anim_right"
+            app:exitAnim="@anim/exit_anim_right"
+            app:popEnterAnim="@anim/pop_enter_anim_right"
+            app:popExitAnim="@anim/pop_exit_anim_right"
+            app:popUpToInclusive="false"/>
+    </fragment>
+
+</navigation>

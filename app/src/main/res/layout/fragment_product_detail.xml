@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.product.ProductDetailFragment">
+
+    <ImageView
+        android:id="@+id/product_detail_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_arrow_left" />
+
+    <ImageView
+        android:id="@+id/product_detail_cart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/product_detail_back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/product_detail_back"
+        app:srcCompat="@drawable/ic_shopping_cart" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/product_detail_back"
+        app:layout_constraintBottom_toTopOf="@+id/product_detail_add_to_cart">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/product_detail_image"
+                android:layout_width="0dp"
+                android:layout_height="300dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/img"
+                android:src="@drawable/img"/>
+            <TextView
+                android:id="@+id/product_detail_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/inter_bold"
+                android:text="USD 350"
+                android:textColor="@color/main_color"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@+id/product_detail_image"
+                app:layout_constraintTop_toBottomOf="@+id/product_detail_image" />
+
+            <TextView
+                android:id="@+id/product_detail_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/inter_bold"
+                android:text="Mens Casual Premium Slim Fit T-Shirts "
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/product_detail_price"
+                app:layout_constraintTop_toBottomOf="@+id/product_detail_price" />
+            <TextView
+                android:id="@+id/product_detail_rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/inter_bold"
+                android:text="4.8"
+                android:textColor="@color/color"
+                app:layout_constraintStart_toEndOf="@+id/imageView9"
+                app:layout_constraintTop_toBottomOf="@+id/product_detail_title" />
+            <ImageView
+                android:id="@+id/imageView9"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintBottom_toBottomOf="@+id/product_detail_rating"
+                app:layout_constraintStart_toStartOf="@+id/product_detail_title"
+                app:layout_constraintTop_toBottomOf="@+id/product_detail_title"
+                app:srcCompat="@drawable/ic_star" />
+
+            <TextView
+                android:id="@+id/product_detail_reviews"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:fontFamily="@font/inter_bold"
+                android:text="234 Reviews"
+                android:textColor="@color/color"
+                app:layout_constraintBottom_toBottomOf="@+id/product_detail_rating"
+                app:layout_constraintStart_toEndOf="@+id/product_detail_rating"
+                app:layout_constraintTop_toTopOf="@+id/product_detail_rating" />
+            <ImageView
+                android:id="@+id/product_detail_like"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@+id/product_detail_price"
+                app:layout_constraintEnd_toEndOf="@+id/product_detail_image"
+                app:layout_constraintTop_toTopOf="@+id/product_detail_price"
+                app:srcCompat="@drawable/ic_not_favorite"
+                app:tint="@color/main_color" />
+            <ImageView
+                android:id="@+id/product_detail_liked"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@+id/product_detail_price"
+                app:layout_constraintEnd_toEndOf="@+id/product_detail_image"
+                app:layout_constraintTop_toTopOf="@+id/product_detail_price"
+                app:srcCompat="@drawable/ic_not_favorite"
+                android:visibility="gone"
+                app:tint="@color/main_color" />
+            <TextView
+                android:id="@+id/product_detail_description"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="24dp"
+                android:fontFamily="@font/inter_bold"
+                android:text="Slim-fitting style, contrast raglan long sleeve, three-button henley placket, light weight and soft fabric for breathable and comfortable wearing. And Solid stitched shirts with round neck made for durability and a great fit for casual fashion wear and diehard baseball fans. The Henley style round neckline includes a three-button placket."
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/product_detail_title"
+                app:layout_constraintStart_toStartOf="@+id/imageView9"
+                app:layout_constraintTop_toBottomOf="@+id/product_detail_rating" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+    <com.google.android.material.button.MaterialButton
+        style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+        android:background="@drawable/button"
+        android:id="@+id/product_detail_add_to_cart"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="24dp"
+        android:text="Add To Cart"
+        android:fontFamily="@font/inter_bold"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
