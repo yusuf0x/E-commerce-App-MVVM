@@ -1,4 +1,5 @@
 # E-commerce-App-MVVM
+    Souq is an Android e-commerce application developed with Kotlin and built on the MVVM architectural pattern.
 # Screenshots
 <br>
 <table>
